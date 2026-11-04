@@ -1,0 +1,90 @@
+/* Sober brand overrides. Starlight theme variables can be overridden here. */
+
+:root {
+  /* Example (commented until brand color is locked):
+  --sl-color-accent-low: #...;
+  --sl-color-accent: #...;
+  --sl-color-accent-high: #...;
+  */
+}
+
+/* Screenshots: subtle frame so white UI screenshots don't blend into the page. */
+.sl-markdown-content img {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 4px;
+}
+
+/* An emphasized line directly after an image is used as a caption. */
+.sl-markdown-content p:has(> img + em) em {
+  display: block;
+  text-align: center;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+}
+
+/* Legacy image alignment (see src/plugins/remark-image-align.mjs). */
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content .clear,
+.sl-markdown-content .starlight-aside {
+  clear: both;
+}
+
+/*
+ * starlight-image-zoom wraps each <img> in <starlight-image-zoom-zoomable>, so the
+ * float goes on the wrapper (or on the <img> itself when it isn't wrapped).
+ */
+@media (min-width: 50rem) {
+  .sl-markdown-content
+    :is(
+      starlight-image-zoom-zoomable:has(> .img-alignright),
+      :not(starlight-image-zoom-zoomable) > img.img-alignright
+    ) {
+    float: right;
+    width: 33.33%;
+    margin: 0 0 1.25rem 2rem;
+  }
+  .sl-markdown-content
+    :is(
+      starlight-image-zoom-zoomable:has(> .img-alignleft),
+      :not(starlight-image-zoom-zoomable) > img.img-alignleft
+    ) {
+    float: left;
+    width: 33.33%;
+    margin: 0 2rem 1.25rem 0;
+  }
+  .sl-markdown-content
+    :is(
+      starlight-image-zoom-zoomable:has(> .img-alignrightfull),
+      :not(starlight-image-zoom-zoomable) > img.img-alignrightfull
+    ) {
+    float: right;
+    margin: 0 0 1.25rem 1.25rem;
+  }
+  .sl-markdown-content
+    :is(
+      starlight-image-zoom-zoomable:has(> .img-alignleft50),
+      :not(starlight-image-zoom-zoomable) > img.img-alignleft50
+    ) {
+    float: left;
+    width: 48%;
+    margin: 0 2% 2% 0;
+  }
+  .sl-markdown-content starlight-image-zoom-zoomable:has(> [class^='img-align']) {
+    display: block;
+  }
+  /* Never upscale small screenshots; keep them against the outer edge. */
+  .sl-markdown-content starlight-image-zoom-zoomable > .img-alignright {
+    margin-inline-start: auto;
+  }
+  .sl-markdown-content starlight-image-zoom-zoomable > .img-alignleft50 {
+    width: 100%;
+  }
+}
+
+/* Responsive video embeds. */
+.sl-markdown-content iframe[src*='youtube.com'] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}

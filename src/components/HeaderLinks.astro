@@ -1,0 +1,33 @@
+---
+import Default from '@astrojs/starlight/components/SocialIcons.astro';
+
+const links = [
+  { label: 'Get Support', href: 'https://uix.ticksy.com/' },
+  {
+    label: 'Buy Sober',
+    href: 'https://themeforest.net/item/sober-woocommerce-wordpress-theme/18332889?ref=uixthemes',
+  },
+];
+---
+
+{
+  links.map((link) => (
+    <a class="header-link" href={link.href} target="_blank" rel="noopener">
+      {link.label}
+    </a>
+  ))
+}
+<Default />
+
+<style>
+  .header-link {
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .header-link:hover {
+    color: var(--sl-color-white);
+  }
+</style>
