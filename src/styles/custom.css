@@ -14,6 +14,16 @@
   border-radius: 4px;
 }
 
+/*
+ * Screenshots without a legacy `#align…` suffix are centered by default.
+ * Images with an alignment class keep their own float + margins (below).
+ * `<img>` is a block (Starlight) and the zoom wrapper is full-width, so auto
+ * margins center it; it also centers an image that isn't wrapped by the zoom.
+ */
+.sl-markdown-content img:not([class^='img-align']) {
+  margin-inline: auto;
+}
+
 /* An emphasized line directly after an image is used as a caption. */
 .sl-markdown-content p:has(> img + em) em {
   display: block;
