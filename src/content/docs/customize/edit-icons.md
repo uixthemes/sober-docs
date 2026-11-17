@@ -8,8 +8,6 @@ sidebar:
 
 ## Manage header icons
 
-![Manage header icons](https://gcdnb.pbrd.co/images/wKLgaJSlP7qg.png?o=1#alignright)
-
 The Sober theme has options to manage the header icons. You can enable/disable icons, or re-arrange them. This option can be found in **Appearance > Customize > Header > Header Icons**.
 
 In order to disable/enable an icon, you can click on the "eye" icon.
@@ -19,8 +17,6 @@ If you want to change the order of icons, just drag them in the order you want.
 Some icons require your website has plugins installed to be visbile and work. They are wishist, currency switcher, and language switcher. Therefore you can also disable these icons by deactivating the plugin.
 
 ### Change the cart icon
-
-![Change shopping cart icon](https://gcdnb.pbrd.co/images/DjzvpZvLxKhX.png?o=1#alignright)
 
 This theme provides options to change some header icons like the cart icon. You can find these options in **Appearance > Customize > Header > Header Icons**.
 
