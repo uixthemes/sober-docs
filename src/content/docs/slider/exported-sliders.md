@@ -1,12 +1,12 @@
 ---
 title: 'Exported Slider'
-description: 'Even in the Installation section, we showed you how to import the demo content with one click.'
+description: 'Even in the Install Theme page, we showed you how to import the demo content with one click.'
 sidebar:
   label: 'Exported Sliders'
   order: 2
 ---
 
-Even in the [Installation](/sober/installation/import-demo/) section, we showed you how to import the demo content with one click. But when you select a version to import, it will import the slider of selected version only. If you want to use other slider from our demo, you need to import it manually.
+Even in the [Install Theme](/sober/getting-started/install-theme/#step-6-import-demo) page, we showed you how to import the demo content with one click. But when you select a version to import, it will import the slider of selected version only. If you want to use other slider from our demo, you need to import it manually.
 
 ## Sliders
 

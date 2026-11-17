@@ -10,6 +10,20 @@ export default defineConfig({
   site: 'https://docs.uix.store',
   base: '/sober',
   trailingSlash: 'always',
+  // The old Installation section is now a single "Install Theme" page under
+  // Getting Started. Keep the old URLs working. Keys are relative to `base`;
+  // destinations include it.
+  redirects: {
+    '/installation/download-sober/': '/sober/getting-started/install-theme/#step-1-download-theme',
+    '/installation/install-sober/': '/sober/getting-started/install-theme/#step-2-install-theme',
+    '/installation/install-plugins/':
+      '/sober/getting-started/install-theme/#step-3-install-plugins',
+    '/installation/config-plugins/':
+      '/sober/getting-started/install-theme/#step-4-config-image-sizes',
+    '/installation/enable-portfolio-support/':
+      '/sober/getting-started/install-theme/#step-5-enable-portfolio-support',
+    '/installation/import-demo/': '/sober/getting-started/install-theme/#step-6-import-demo',
+  },
   markdown: {
     remarkPlugins: [remarkImageAlign],
   },
@@ -25,7 +39,6 @@ export default defineConfig({
       },
       sidebar: [
         section('Getting Started', 'getting-started'),
-        section('Installation', 'installation'),
         section('Theme Options', 'theme-options'),
         section('WPBakery Page Builder', 'visual-composer'),
         section('Elementor Builder', 'elementor'),
