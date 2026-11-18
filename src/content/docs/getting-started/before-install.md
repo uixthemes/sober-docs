@@ -1,5 +1,5 @@
 ---
-title: 'Before Install'
+title: 'Before you install'
 description: 'WordPress information, server requirements and files included in the package to check before installing Sober.'
 sidebar:
   order: 1
